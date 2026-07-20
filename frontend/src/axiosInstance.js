@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000" 
-      : "https://refreshing-communication-production.up.railway.app",
+  baseURL: process.env.REACT_APP_API_URL,
   withCredentials: true,
 });
 
